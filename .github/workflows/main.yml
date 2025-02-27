@@ -119,9 +119,9 @@ jobs:
           context: ./gateway/
           push: true
           tags: maximsupreme/taski_gateway:latest
-    deploy:
+  deploy:
     runs-on: ubuntu-latest
-    needs: 
+    needs:
       - build_and_push_to_docker_hub
       - build_frontend_and_push_to_docker_hub
       - build_gateway_and_push_to_docker_hub
